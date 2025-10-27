@@ -40,7 +40,7 @@
 - [ ] Accessibility check
 
 ## Phase 7: Deployment
-- [ ] Final testing
-- [ ] Create checkpoint
+- [x] Final testing
+- [x] Create checkpoint
 - [ ] Deploy to production
 
