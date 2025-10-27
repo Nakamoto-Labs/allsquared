@@ -17,6 +17,7 @@ import Terms from "./pages/Terms";
 import Dashboard from "./pages/Dashboard";
 import Contracts from "./pages/Contracts";
 import NewContract from "./pages/NewContract";
+import ContractDetail from "./pages/ContractDetail";
 import DashboardLayout from "./components/DashboardLayout";
 
 function Router() {
@@ -37,6 +38,11 @@ function Router() {
       <Route path="/dashboard/contracts/new">
         <DashboardLayout>
           <NewContract />
+        </DashboardLayout>
+      </Route>
+      <Route path="/dashboard/contracts/:id">
+        <DashboardLayout>
+          <ContractDetail />
         </DashboardLayout>
       </Route>
       

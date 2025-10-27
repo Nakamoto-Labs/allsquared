@@ -58,13 +58,13 @@
 - [x] Build tRPC routers (contracts, milestones, notifications)
 - [x] Create user dashboard with contract overview
 - [x] Build contract creation wizard
-- [ ] Implement 5 contract templates
+- [x] Implement 5 contract templates
 - [ ] Create milestone management interface
-- [ ] Add contract signing workflow
-- [ ] Build contract detail view
+- [x] Add contract signing workflow
+- [x] Build contract detail view
 - [ ] Implement basic notifications
 - [ ] Add user profile management
-- [ ] Create contract list with filters
+- [x] Create contract list with filters
 - [ ] Apply modern minimalist design system
 - [ ] Test all MVP features end-to-end
 - [ ] Save checkpoint and push to GitHub
