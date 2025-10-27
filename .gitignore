@@ -44,6 +44,7 @@ pids
 *.pid
 *.seed
 *.pid.lock
+*.bak
 
 # Coverage directory used by tools like istanbul
 coverage/
@@ -104,3 +105,46 @@ temp/
 *.db
 *.sqlite
 *.sqlite3
+
+# Drizzle ORM generated migrations
+drizzle/migrations/*.sql
+!drizzle/migrations/.gitkeep
+
+# Uploads and user content
+uploads/
+client/public/uploads/
+
+# Screenshots and testing
+screenshots/
+*.png.tmp
+
+# Secrets and sensitive data
+*.pem
+*.key
+*.cert
+secrets/
+
+# Lock files (keep pnpm-lock.yaml)
+package-lock.json
+yarn.lock
+
+# Drizzle ORM
+drizzle/migrations/*.sql
+
+# Uploads and user content
+uploads/
+client/public/uploads/
+
+# Screenshots and testing
+screenshots/
+*.png.tmp
+
+# Secrets and sensitive data
+*.pem
+*.key
+*.cert
+secrets/
+
+# Lock files (keep pnpm-lock.yaml)
+package-lock.json
+yarn.lock

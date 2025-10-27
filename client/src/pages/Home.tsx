@@ -1,3 +1,4 @@
+import { useAuth } from "@/_core/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -11,6 +12,8 @@ import {
 import { Link } from "wouter";
 
 export default function Home() {
+  const { user, isAuthenticated } = useAuth();
+
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
@@ -34,9 +37,15 @@ export default function Home() {
                 confidence.
               </p>
               <div className="flex flex-col gap-4 sm:flex-row">
-                <Button size="lg" asChild>
-                  <Link href="/contact">Join Waitlist</Link>
-                </Button>
+                {isAuthenticated ? (
+                  <Button size="lg" asChild>
+                    <Link href="/dashboard">Go to Dashboard</Link>
+                  </Button>
+                ) : (
+                  <Button size="lg" asChild>
+                    <Link href="/contact">Join Waitlist</Link>
+                  </Button>
+                )}
                 <Button size="lg" variant="outline" asChild>
                   <Link href="/how-it-works">See How It Works</Link>
                 </Button>
@@ -223,9 +232,15 @@ export default function Home() {
               up for early access.
             </p>
             <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
-              <Button size="lg" asChild>
-                <Link href="/contact">Join Waitlist</Link>
-              </Button>
+              {isAuthenticated ? (
+                <Button size="lg" asChild>
+                  <Link href="/dashboard">Go to Dashboard</Link>
+                </Button>
+              ) : (
+                <Button size="lg" asChild>
+                  <Link href="/contact">Join Waitlist</Link>
+                </Button>
+              )}
               <Button size="lg" variant="outline" asChild>
                 <Link href="/pricing">View Pricing</Link>
               </Button>
