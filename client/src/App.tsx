@@ -14,28 +14,54 @@ import HowItWorks from "./pages/HowItWorks";
 import Pricing from "./pages/Pricing";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
+import Dashboard from "./pages/Dashboard";
+import Contracts from "./pages/Contracts";
+import NewContract from "./pages/NewContract";
+import DashboardLayout from "./components/DashboardLayout";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
   return (
-    <div className="flex min-h-screen flex-col">
-      <Header />
-      <main className="flex-1">
-        <Switch>
-          <Route path={"/"} component={Home} />
-          <Route path={"/how-it-works"} component={HowItWorks} />
-          <Route path={"/features"} component={Features} />
-          <Route path={"/pricing"} component={Pricing} />
-          <Route path={"/about"} component={About} />
-          <Route path={"/contact"} component={Contact} />
-          <Route path={"/terms"} component={Terms} />
-          <Route path={"/privacy"} component={Privacy} />
-          <Route path={"/404"} component={NotFound} />
-          <Route component={NotFound} />
-        </Switch>
-      </main>
-      <Footer />
-    </div>
+    <Switch>
+      {/* Dashboard routes - protected */}
+      <Route path="/dashboard">
+        <DashboardLayout>
+          <Dashboard />
+        </DashboardLayout>
+      </Route>
+      <Route path="/dashboard/contracts">
+        <DashboardLayout>
+          <Contracts />
+        </DashboardLayout>
+      </Route>
+      <Route path="/dashboard/contracts/new">
+        <DashboardLayout>
+          <NewContract />
+        </DashboardLayout>
+      </Route>
+      
+      {/* Marketing pages - public */}
+      <Route path="*">
+        <div className="flex min-h-screen flex-col">
+          <Header />
+          <main className="flex-1">
+            <Switch>
+              <Route path={"/"} component={Home} />
+              <Route path={"/how-it-works"} component={HowItWorks} />
+              <Route path={"/features"} component={Features} />
+              <Route path={"/pricing"} component={Pricing} />
+              <Route path={"/about"} component={About} />
+              <Route path={"/contact"} component={Contact} />
+              <Route path={"/terms"} component={Terms} />
+              <Route path={"/privacy"} component={Privacy} />
+              <Route path={"/404"} component={NotFound} />
+              <Route component={NotFound} />
+            </Switch>
+          </main>
+          <Footer />
+        </div>
+      </Route>
+    </Switch>
   );
 }
 

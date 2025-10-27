@@ -56,8 +56,8 @@
 - [x] Upgrade to web-db-user template
 - [x] Design database schema (users, contracts, milestones, escrow)
 - [x] Build tRPC routers (contracts, milestones, notifications)
-- [ ] Create user dashboard with contract overview
-- [ ] Build contract creation wizard
+- [x] Create user dashboard with contract overview
+- [x] Build contract creation wizard
 - [ ] Implement 5 contract templates
 - [ ] Create milestone management interface
 - [ ] Add contract signing workflow
