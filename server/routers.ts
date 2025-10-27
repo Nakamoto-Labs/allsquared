@@ -5,6 +5,7 @@ import { publicProcedure, router } from "./_core/trpc";
 import { contractsRouter } from "./routers/contracts";
 import { milestonesRouter } from "./routers/milestones";
 import { notificationsRouter } from "./routers/notifications";
+import { templatesRouter } from "./routers/templates";
 
 export const appRouter = router({
   system: systemRouter,
@@ -24,6 +25,7 @@ export const appRouter = router({
   contracts: contractsRouter,
   milestones: milestonesRouter,
   notifications: notificationsRouter,
+  templates: templatesRouter,
 });
 
 export type AppRouter = typeof appRouter;

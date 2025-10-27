@@ -66,6 +66,10 @@
 - [ ] Add user profile management
 - [x] Create contract list with filters
 - [ ] Apply modern minimalist design system
+- [ ] Create Typeform-style contract creation flow
+- [ ] Build template management panel
+- [ ] Add template editor with variables
+- [ ] Implement template selection in contract creation
 - [ ] Test all MVP features end-to-end
 - [ ] Save checkpoint and push to GitHub
 
